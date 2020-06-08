@@ -1,0 +1,14 @@
+<%provide(:title, "Edit #{@post.title}")%>
+<h3>Edit post</h3>
+
+<%=render 'shared/error' %>
+
+<%= form_with(url: post_path, local: true, method: :put) do |f| %>
+    <h4><%= @post.title %></h4>
+    
+    <%=f.label :body %>
+    <%=f.text_field :body , value: @post.body    %>
+    <%= f.submit "Edit post" %>
+
+
+<%end%>

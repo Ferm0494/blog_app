@@ -1,0 +1,14 @@
+<h1>Create a new Post</h1>
+
+<%= render 'shared/error' %>
+<%= form_with(url: posts_path, local:true) do |f| %>
+<%=f.label :title%>
+<%=f.text_field :title %>
+<br>
+<%=f.label :body %>
+<%=f.text_field :body %>
+
+<%=f.submit "Create Post" %>
+
+
+<% end %>

@@ -1,0 +1,10 @@
+<%= render 'shared/flash' %>
+<h1>Recent Posts: </h1>
+<%= raw "<p>hello world!</p>" %>
+<ul>
+<% @posts.each do |post| %>
+    <li> <%=link_to post.title, post %> </li>
+<%end%>
+</ul>
+
+<%= link_to "Create new post", new_post_path %>

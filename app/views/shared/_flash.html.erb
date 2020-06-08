@@ -1,0 +1,8 @@
+<% if !flash[:success].nil?%>
+<h2> <%= flash[:success] %></h2>
+   
+
+<%elsif !flash[:error].nil?%>
+    <h2> <%= flash[:error] %></h2>
+   
+<%end%>
