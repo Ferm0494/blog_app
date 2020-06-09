@@ -1,0 +1,8 @@
+<h3>Edit comment :</h3>
+
+<%= form_with(model: @comment,url: post_comment_path(@post,@comment), local: true, method: :put) do |f|%>
+<%= f.label "Comment" %>
+<%= f.text_field :body %>
+<%= f.submit "Update" %>
+<%end%>
+

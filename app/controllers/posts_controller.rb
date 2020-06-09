@@ -13,9 +13,7 @@ before_action :set_post, only: [:show, :edit, :update, :destroy]
   def new
     @post = Post.new
   end
-
-  def show
-  end
+  
 
   def edit  
   end
@@ -36,6 +34,7 @@ before_action :set_post, only: [:show, :edit, :update, :destroy]
       flash[:success] = "Post successfully created!"
       redirect_to root_path
     else
+      puts "Errors given #{@post.errors.full_messages}"
       flash[:error] = "Post couldnt be created!"
       render 'new'
     end
